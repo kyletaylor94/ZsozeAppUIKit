@@ -1,0 +1,15 @@
+{
+  "originHash" : "f9640590bea3f0a22e8f69358a499af9491f5de8047f69feb4a30437f2eb48ea",
+  "pins" : [
+    {
+      "identity" : "swiftlayoutkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kyletaylor94/SwiftLayoutKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "79b55e459fecba9a0a690675599df9b3325c971d"
+      }
+    }
+  ],
+  "version" : 3
+}
