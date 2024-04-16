@@ -24,6 +24,9 @@
 		98795C162BCBF87600723980 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98795C152BCBF87600723980 /* NotificationsVC.swift */; };
 		98795C182BCBF95D00723980 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98795C172BCBF95D00723980 /* NotificationCell.swift */; };
 		98795C1D2BCDA5E500723980 /* SafariCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98795C1C2BCDA5E500723980 /* SafariCell.swift */; };
+		98795C1F2BCED55C00723980 /* Animation - 1713282500452.json in Resources */ = {isa = PBXBuildFile; fileRef = 98795C1E2BCED55C00723980 /* Animation - 1713282500452.json */; };
+		98795C222BCED59E00723980 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 98795C212BCED59E00723980 /* Lottie */; };
+		98795C242BCED5BE00723980 /* LottieAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98795C232BCED5BE00723980 /* LottieAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,8 @@
 		98795C152BCBF87600723980 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		98795C172BCBF95D00723980 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		98795C1C2BCDA5E500723980 /* SafariCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariCell.swift; sourceTree = "<group>"; };
+		98795C1E2BCED55C00723980 /* Animation - 1713282500452.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Animation - 1713282500452.json"; path = "../../../Downloads/Animation - 1713282500452.json"; sourceTree = "<group>"; };
+		98795C232BCED5BE00723980 /* LottieAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98795C112BCBC9D300723980 /* SwiftLayoutKit in Frameworks */,
+				98795C222BCED59E00723980 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,7 @@
 		98795BD52BCB014B00723980 /* ZsozeAppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				98795C1E2BCED55C00723980 /* Animation - 1713282500452.json */,
 				98795C0B2BCBC8EA00723980 /* Utils */,
 				98795BED2BCBC6E700723980 /* ViewModel */,
 				98795BEC2BCBC6E300723980 /* Model */,
@@ -271,6 +278,7 @@
 		98795C0B2BCBC8EA00723980 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				98795C232BCED5BE00723980 /* LottieAnimations.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 			name = ZsozeAppUIKit;
 			packageProductDependencies = (
 				98795C102BCBC9D300723980 /* SwiftLayoutKit */,
+				98795C212BCED59E00723980 /* Lottie */,
 			);
 			productName = ZsozeAppUIKit;
 			productReference = 98795BD32BCB014B00723980 /* ZsozeAppUIKit.app */;
@@ -340,6 +349,7 @@
 			mainGroup = 98795BCA2BCB014B00723980;
 			packageReferences = (
 				98795C0F2BCBC9D300723980 /* XCRemoteSwiftPackageReference "SwiftLayoutKit" */,
+				98795C202BCED59E00723980 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 98795BD42BCB014B00723980 /* Products */;
 			projectDirPath = "";
@@ -358,6 +368,7 @@
 				98795BE02BCB014C00723980 /* Assets.xcassets in Resources */,
 				98795BE32BCB014C00723980 /* Base in Resources */,
 				98795BDE2BCB014B00723980 /* Base in Resources */,
+				98795C1F2BCED55C00723980 /* Animation - 1713282500452.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +392,7 @@
 				98795C1D2BCDA5E500723980 /* SafariCell.swift in Sources */,
 				98795BD92BCB014B00723980 /* SceneDelegate.swift in Sources */,
 				98795C0E2BCBC94E00723980 /* SettingsVC.swift in Sources */,
+				98795C242BCED5BE00723980 /* LottieAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +633,14 @@
 				kind = branch;
 			};
 		};
+		98795C202BCED59E00723980 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -628,6 +648,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 98795C0F2BCBC9D300723980 /* XCRemoteSwiftPackageReference "SwiftLayoutKit" */;
 			productName = SwiftLayoutKit;
+		};
+		98795C212BCED59E00723980 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98795C202BCED59E00723980 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

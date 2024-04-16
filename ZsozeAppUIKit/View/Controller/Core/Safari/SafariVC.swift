@@ -57,7 +57,6 @@ class SafariVC: UIViewController {
         return button
     }()
     
-    private let scrollView = UIScrollView()
     
     private let stackView: UIStackView = {
         let stack = UIStackView()
@@ -66,8 +65,8 @@ class SafariVC: UIViewController {
         return stack
     }()
     
+    private let scrollView = UIScrollView()
     private let tableView = UITableView()
-    
     private var selectedSections = Set<SafariTopHorizontalSection>()
     
     
@@ -87,6 +86,7 @@ class SafariVC: UIViewController {
         tableView.dataSource = self
         tableView.register(SafariCell.self, forCellReuseIdentifier: "safariCell")
         tableView.separatorStyle = .none
+        
         tableView.backgroundColor = UIColor.backGround
         tableView.rowHeight = 300
         
@@ -107,11 +107,11 @@ class SafariVC: UIViewController {
         for section in SafariTopHorizontalSection.allCases {
             let button = UIButton(type: .system)
             button.setTitle(section.titleName, for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
             button.setTitleColor(UIColor(.primary), for: .normal)
             button.addTarget(self, action: #selector(sectionButtonTapped), for: .touchUpInside)
             button.tag = section.rawValue
-            button.setDimensions(height: 40, width: 200)
+            button.setDimensions(height: 40, width: 120)
             stackView.addArrangedSubview(button)
             
             // Initially select all sections
@@ -122,7 +122,7 @@ class SafariVC: UIViewController {
         }
         
         view.addSubview(tableView)
-        tableView.anchor(top: scrollView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
+        tableView.anchor(top: scrollView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         
     }
     
@@ -156,6 +156,7 @@ extension SafariVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "safariCell", for: indexPath) as! SafariCell
+        cell.selectionStyle = .none
         return cell
     }
     
